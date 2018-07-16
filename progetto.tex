@@ -1,0 +1,150 @@
+\documentclass[a4paper,12pt,italian]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{appendix}
+\usepackage{amscd}
+\usepackage{subfig}
+\usepackage{cite}
+\usepackage[autostyle,italian=guillemets]{csquotes}
+\usepackage{bm}
+\usepackage{vmargin}
+\usepackage{hyperref}
+
+\setmarginsrb{25mm}{20mm}{25mm}{20mm}{0pt}{0mm}{0pt}{0mm}
+\hyphenation{ShuntLDO}
+\hyphenation{DC-DC}
+
+\begin{document}
+%\input{my_macros}
+\pagestyle{plain}
+\pagenumbering{gobble}
+\noindent
+
+%\noindent {\em Relatore} {\bf Dott. Giacomo Sguazzoni}, {\tt giacomo.sguazzoni@fi.infn.it}\\
+%\noindent {\em Correlatore} {\bf Prof. Raffaello D'Alessandro}, {\tt raffaello.dalessandro@unifi.it}\\
+%\noindent {\em Candidato} {\bf Andrea Fiaschi}, {\tt andrea.fiaschi2@stud.unifi.it}
+%
+%\vskip 0.5cm
+
+%\noindent \textbf{Sviluppo di un sistema innovativo di alimentazione del tracciatore interno di CMS per la fase ad alta luminosità di LHC}
+\begin{center}
+\noindent  \large{\textbf{PhD Research project of the candidate Andrea Fiaschi}}
+\end{center} 
+
+%\vskip 0.5cm
+
+\subsection*{Introduction}
+%Serial alimentation is a 
+%L'alimentazione seriale è una tecnologia di frontiera, mai utilizzata prima d'ora in
+%un esperimento di fisica delle alte energie, ma in fase di sviluppo per l'Inner Tracker,
+%il rivelatore a pixel del nuovo Tracciatore di CMS per HL-LHC. A causa delle scelte
+%progettuali dettate dall’elevatissima luminosità istantanea (5 - 7.5 $\cdot 10^34 cm^{-2} s^{-1}$ ) e
+%dalla radiazione (fino a 2.3 $\cdot$ 10 16 n 1 MeV eq /cm 2 , 1.2 Grad), il funzionamento dei due
+%miliardi di canali dell'Inner Tracker richiede 50 -- 60 kW. Alimentando in serie i
+%singoli moduli a pixel, questa enorme potenza può essere trasportata riducendo drasticamente la sezione dei cavi e quindi minimizzando gli effetti negativi del materiale
+%passivo sulle prestazioni del rivelatore.
+
+The large expected integrated luminosity, around $3000 fb^{-1}$ in the nominal HL-LHC running scenario, enables the
+exploration of the multi-TeV scale by searches for particles with high masses as well as by investigation of processes with very low cross sections. Observation of such rare processes (e.g.long-lived massive charged particles) would signal beyond SM (BSM) physics. Additionally,
+models with an extended Higgs sector may manifest themselves in additional Higgs bosons and other exotic new particles. Another path towards the discovery of new physics is to measure its effect on known processes. Many models for new physics predict deviations of the
+Higgs boson couplings from SM expectations by several per cent. By precisely measuring the properties of the Higgs boson, these predictions can be tested.
+To reach these goals CMS experiment will be upgraded, in particular for the Inner Tracker (IT) will be implement a serial powering for the tracker detector. Serial powering is needed to cope with the many of the main requirements for Phase-2: Radiation tolerance, Increasing granularity, Improved two-track separation, Reduced material in the tracking volume, Robust pattern recognition, Contribution to the level-1 trigger and Extended tracking acceptance.
+
+
+\subsection*{Short description of the current situation}
+Extended tracking acceptance, high granularity and the reducing of material in the tracking volume brought to chose Serial Powering system for the IT, instead of parallel powering or the use of DC-DC converters (That can not withstand the high level of radiation expected for Phase-2 in the internal layer of IT, $2.3 \cdot 10^16 n_{\mathrm{1 MeV eq}}/cm^2$, 1.2 Grad). To handle the supply locally on every ROC there is a dedicated circuit ShuntLDO\cite{SLDO} (a regulator \textit{Low Drop Out} coupled with a Shunt). The new prototype of ROC is already available, it is RD53A\cite{RD53A}. In RD53A is implemented in 65 nm CMOS technology the ShuntLDO circuit responsible to handle serial powering  . Up to now the validation of ShuntLDO performances has been evaluated stand alone or with single/few ROC connected together. These studies have been performed by RD53 Collaboration at CERN and partially in Florence INFN Laboratory, these tests were part of my thesis work (\textit{Development of an innovative powering scheme for CMS Inner Tracker for High Luminosity phase of LHC}). Next crucial step for Serial Powering development is the test of an extended serial power chain. Also, for the Outer Tracker there will be improvement in the powering scheme.
+
+In the field of data analysis searches for Higgs boson pair production have been performed by the ATLAS and CMS experiments using LHC proton-proton collision data. These include searches for BSM (Beyond Standard Model) production as well as more targeted searches for production with SM-like kinematics in $\sqrt{s} = 8$ TeV and 13 TeV data. For example the search for Higgs boson pair production, HH, and resonant Higgs boson pair production, $\mathrm{X \rightarrow HH}$, where one of the H decays into $b\overline{b}$, and the other into Z ($ll$) Z ($\nu\nu$) or W ($l\nu$) W ($l\nu$), where $l$ is either an electron, a muon, or a tau lepton that decays leptonically. 
+The search presented in paper\cite{Analysis} by CMS Collaboration (that includes the Florence group of CMS) is based on LHC proton-proton collision data at $\sqrt{s}=13$ TeV collected by the CMS experiment, corresponding to an integrated luminosity of 35.9 $fb^{-1}$. 
+Nonresonant Higgs boson pair production (HH) can be used to directly study the Higgs boson self-coupling. In the SM the destructive interference between different diagrams makes the observation of HH production extremely challenging, even in the most optimistic scenarios of energy and integrated luminosity at the future High Luminosity LHC. 
+Indirect effects at the electroweak scale arising from beyond the standard model (BSM) phenomena at a higher scale can be parameterized in an effective field theory framework by introducing coupling modifiers for the SM parameters involved in HH production.%, namely $k_{\lambda}=\lambda /\lambda_{SM} $ for the Higgs boson self-coupling $\lambda$ and $k_t= y_t /y_{t_{SM}}$ for the top quark Yukawa coupling $y_t$. 
+ Such modifications of the Higgs boson couplings could enhance Higgs boson pair production to rates observable with the current dataset.
+
+
+\subsection*{Improvements and future activities}
+First part of the doctoral project is a Serial Powering activity, for the final part of 2018 includes  Tests with bare RD53A on Single Chip Card (SCC) and Tests with single RD53A modules on SCC.
+For 2019 are expected the first tests with 1x Serial Powering chain on bench (general tests) and 1x Serial Powering chains on ladder prototype + test. More in general powering scheme concepts will be tested both in laboratory and on beam from 2019 to 2021 to evaluate behaviour with respect to performance figures (reliability, induced noise, voltage stability, failure handling).
+Furthermore the IT unit (Firenze) and CAEN, leader company in electronics for high energy physics, are participating into the joint projects, funded by EU through Regione Toscana, NEXTLITE (2018-2019) and PRIMIS (2019-2020) dedicated to the development of large-scale, LV and HV integrated, supply systems. In particular, the objective is to test in 2021 a realistic power group with CMS-ROC full scale modules to finalize the power scheme design for the experiment.
+ 
+
+On the other hand with the data take of 2017 and 2018 is feasible the analysis for the search for resonant and nonresonant Higgs boson pair production in the $b \overline{b}l\nu l\nu$ final state in proton-proton collision at $\sqrt{s}=13$ TeV with a better statistics, expanding beyond mass range. Also a simulation of data take after Long Shutdown 3 (LS3) can be performed, with the upgrade of CMS not only the luminosity will change but also the response of the detector (tracking acceptance, track separation ...).
+
+
+\subsection*{Expected results}
+The project is based on test and searches in which CMS Florence group is involved already. Several innovative aspects and technologies will be addressed in the present project. The new CMS Tracker will be significantly different, in many key features, from similar detectors currently operational. 
+Gaining early experience on serial powering as well on data analysis, is important to learn how to exploit the full potential of the new tracker. This acquired competence will be useful for the final experiment that, from day one in 2026, must operate at the maximum of its capability.
+
+%\renewcommand{\bibname}{References} 
+%\subsection*{References}
+\begin{thebibliography}{1}
+
+\bibitem{SLDO} M.~Karagounis, D.~Arutinov, M.~Barbero et al. ``An Integrated Shunt-LDO Regulator for Serial Powered Systems''. In: \textit{Proc. of the European Solid-State Device Conference,
+ESSCIRC 2009 (2009)}, pp. 276–279. doi: 10.1109/ESSCIRC.2009.5325974.
+
+\bibitem{RD53A} M.~Garcia-Sciveres, ``The RD53A Integrated Circuit''
+CERN-RD53-PUB-17-001 (2017), \url{https://cds.cern.ch/record/2287593}.
+
+\bibitem{Analysis}
+%\bibitem{Sirunyan:2017guj}%
+  A.~M.~Sirunyan {\it et al.} [CMS Collaboration], ``Search for resonant and nonresonant Higgs boson pair production in the $ \mathrm{b}\overline{\mathrm{b}}\mathit{\ell \nu \ell \nu } $ final state in proton-proton collisions at $ \sqrt{s}=13 $ TeV'',  JHEP {\bf 1801} (2018) 054,  doi:10.1007/JHEP01(2018)054, [arXiv:1708.04188 [hep-ex]].
+
+\end{thebibliography}
+\end{document}
+%1) This proposal is based on the participation of several young researchers alongside senior staff. This is of paramount importance to build
+%up the expertise needed to operate, run and maintain, for over 10 years after 2026, the new CMS Tracker that will be shaped out also from
+%the present project. This project is an investment, in an international and competitive environment, on the future of science in general and
+%particle physics in particular through the young generations.
+%2) CERN is the world leading laboratory for high energy physics at colliders and the US is the largest contributor to CERN accelerators and
+%detectors. For example US-CMS represents almost 30% of the entire CMS collaboration and it is participating accordingly to the detector
+%upgrade. The proposal therefore builds on the existing scientific collaboration between Italy and the US within CMS and enables further
+%exchange between the two countries.
+%3) The involvement in this project of CAEN as industrial partner will facilitate the dissemination of the acquired technological knowledge,
+%namely on power supply technologies, not only within the niche field of high energy physics, but also in nuclear and health science
+%applications that, on the contrary, are of greatest importance for everybody daylife.
+%
+%WP1: the validation of the pixel detector prototypes will proceed by testing in beam samples irradiated at different fluences corresponding to
+%10-years of HL-LHC operating conditions. In 2019 RD53A-ROC modules will be tested to validate and optimize the cell layout for both
+%planar and 3D sensor technologies. The results will then be used to design sensors for the CMS-ROC to be then tested as well with a
+%similar approach through 2020 and 2021 to arrive to the final sensor design.
+%Thanks to the high beam intensity and to the tracking provided by the FNAL telescope, the high rate tests allow us to study in detail hit and
+%charge collection efficiency, whose outcome will serve as input for sensor optimization. The IT unit (Firenze) is responsible for developing
+%the Si-detectors within the framework of the Advanced Hybrid Pixel Detector working package (WP7) of the Horizon 2020 - Advanced
+%European Infrastructures for Detectors at Accelerators project (AIDA2020). The US unit (FNAL) will provide support for the integration,
+%calibration, readout and monitoring of the devices at the beam test facility.
+%
+%WP2: the OTSDAQ system will be deployed to integrate the RD53A-ROC in 2019, and it will be extended to CMS-ROC in 2020. All features
+%(web interface, automated calibration tasks, data and histogram sharing) will be tested and validated during the 2019 and 2020 beam tests.
+%These are small scale experiments that enable to probe all aspects of a DAQ system: run control on several devices, trigger handling,
+%online monitoring. In 2021, high-rate beam tests of multi-chip full size modules will aid in estimating the computing resources required by the
+%OTSDAQ tasks. This is a key step to finalize the design of the DAQ boards for the experiment.
+%
+%WP3: powering scheme concepts will be tested both in laboratory and on beam from 2019 to 2021 to evaluate behaviour with respect to
+%performance figures (reliability, induced noise, voltage stability, failure handling). The IT unit (Firenze), which had a cardinal role in
+%designing the power system for the current CMS Tracker, and CAEN, leader company in electronics for high energy physics, are
+%participating into the joint projects, funded by EU through Regione Toscana, NEXTLITE (2018-2019) and PRIMIS (2019-2020) dedicated to
+%the development of large-scale, LV and HV integrated, supply systems. Prototypes will be deployed in FNAL beam tests. In particular, the
+%objective is to test in 2021 a realistic power group with CMS-ROC full-scale modules to finalize the power scheme design for the
+%experiment. The US unit has a key role in integrating such prototypes into the beam test environment, DAQ and controls.
+%
+%
+%MILESTONES
+%2019
+%Jul 1: RD53A-ROC integrated in OTSDAQ (WP2)
+%Dec 1: Beam test of planar and 3D rad-hard sensors with RD53A-ROC (WP1)
+%2020
+%Jul 1: Beam test of first CAEN prototypes (WP3)
+%Oct 1: CMS-ROC integrated in OTSDAQ (WP2)
+%Dec 1: Beam test of planar and 3D rad-hard sensors with CMS-ROC (WP1)
+%2021
+%Oct 1: Test of power supply system test (WP3)
+%Dec 1: Beam test of CMS-ROC multi-chip modules (WP1)
+%
+%Starting from 2026, the HL-LHC will achieve an instantaneous luminosity of $5 \times 10 34 cm - 2 s - 1$,
+%with a bunch spacing of 25 ns, as described in Chapter 1. In each bunch crossing, the CMS
+%tracker will be traversed by around 6000 charged particles (inclusively, counting reconstructed
+%tracks with p T > 300 MeV), produced by about 200 collisions on average, and in those challeng-
+%ing conditions excellent tracking performance has to be maintained.
