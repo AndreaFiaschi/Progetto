@@ -2,7 +2,9 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{mdframed}
 \usepackage{wrapfig}
+\usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{appendix}
@@ -13,6 +15,18 @@
 \usepackage{bm}
 \usepackage{vmargin}
 \usepackage{hyperref}
+
+\newmdenv[
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  skipabove=\topsep,
+  skipbelow=\topsep,
+  leftmargin=-10pt,
+  rightmargin=0pt,
+  innertopmargin=0pt,
+  innerbottommargin=0pt
+]{siderules}
 
 \setmarginsrb{25mm}{20mm}{25mm}{20mm}{0pt}{0mm}{0pt}{0mm}
 \hyphenation{ShuntLDO}
@@ -33,58 +47,65 @@
 %\vskip 0.5cm
 \vspace{-.2cm}
 \subsection*{Abstract of my PhD research program}
-%\vskip -.3cm
-My PhD project focusses both on detector R\&D and data analysis. I would keep on studying the Serial Powering for the CMS Inner Tracker (IT) for phase-2 within the larger scope of a system-wide test, exploiting the knowledge acquired during my degree thesis work; in the same time, I aim to analyze 2017-2018 (phase-1) data set to investigate HH production processes to learn how detector performance impacts on physics; finally, I would combine both aspect into running Monte Carlo simulation in the upgraded HL-LHC scenario to evaluate the improved CMS potential in the Higgs boson pair production channels, that will greatly benefit of the detector upgrade. I aleady experienced Monte Carlo studies in my Bachelor’s Degree Thesis\cite{TesiTriennale}.
+\vskip -.2cm
+My PhD project focusses both on detector R\&D and data analysis. I would keep on studying the Serial Powering for the CMS Inner Tracker (IT) for phase-2 within the larger scope of a system-wide test, exploiting the knowledge acquired during my degree thesis work; in the same time, I aim to analyze Phase-I RunII data set (collected in 2017-2018) to investigate for HH production processes to learn how detector performance impacts on physics; finally, I would combine both aspects into running Monte Carlo simulation in the upgraded HL-LHC scenario to evaluate the improved CMS potential in the Higgs boson pair production channels, that will greatly benefit of the detector upgrade.
 %\vspace{-.3cm}
 \subsection*{The LHC and CMS experimental schedule}
-%\vskip -.3cm
+\vskip -.2cm
 As of today, CMS has collected $\sim 150\ifb$ of pp collisions data at an energy between 7 and 13$\TeV$. In 2021, after two years of shutdown, the energy will increase to $14\TeV$ and the total integrated luminosity should reach $\sim 300\ifb$ by 2023. This data set has already allowed the discovery of the Higgs boson and is now being used to measure its properties.
 
-However, a change of pace will follow with the High Luminosity phase (HL-LHC) from 2026 to 2039, when the $10\times$ larger integrated luminosity, around  $3000-4500\ifb$ in the HL-LHC running scenario, will enable high precision measurements and the
-exploration of the multi-TeV scale by searches for particles with high masses as well as by investigation of processes with very low cross sections. Observation of such rare processes (e.g.long-lived massive charged particles) would suggest signal beyond SM (BSM) physics. % Additionally, models with an extended Higgs sector may manifest themselves in additional Higgs bosons and other exotic new particles. 
-Another path towards the discovery of new physics is to measure its effect on known processes. Many models for new physics predict deviations of the Higgs boson couplings from SM expectations by several per cent, for example non-resonant Higgs boson pair production (HH) can be used to directly study the Higgs boson self-coupling. By precisely measuring the properties of the Higgs boson, these predictions can be tested.
+However, a change of pace will follow with the High Luminosity phase (HL-LHC) from 2026 to 2039, when the $10\times$ larger integrated luminosity, around  $3000-4500\ifb$, will enable high precision measurements and the
+exploration of the multi-TeV scale by searches for particles with high masses and by observation of unexpected phenomena, e.g. long-lived massive charged particles, that would be regarded as hints of new physics. % Additionally, models with an extended Higgs sector may manifest themselves in additional Higgs bosons and other exotic new particles.
+ 
+Another path for discoveries is the high precision measurements of known processes to look for deviations from predictions. For example, many new physics models predict $\cal{O}(\%)$ alterations of the Higgs boson couplings with respect to the Standard Model (SM) and non-resonant Higgs boson pair production (HH) is one of the most important final state to directly probe the Higgs boson self-coupling. 
+%By precisely measuring the properties of the Higgs boson, these predictions can be tested.
 
-To reach these goals CMS experiment will be massively upgraded, for example the tracker detector will be completely replaced. 
-This new apparatus will feature several frontier technological choices to allow for the demanding requirements to be satisfied.  
-In particular the IT %, the innermost part of the new tracker detector,
-will implement a Serial Powering scheme, that has never been used.  Serial powering is one of the ingredients  needed to cope with the requirements for Phase-2. %: radiation tolerance, increased granularity, improved two-track separation, reduced material in the tracking volume, robust pattern recognition and extended tracking acceptance.
+To reach these goals the CMS experiment will be massively upgraded and, most important among many improvements, the tracker detector will be completely replaced. This new apparatus will feature several frontier technologies to comply with challenging requirements. In particular the IT %, the innermost part of the new tracker detector,
+will implement a Serial Powering scheme, that has never been used.  Serial powering is one of the crucial ingredients needed for Phase-2. %: radiation tolerance, increased granularity, improved two-track separation, reduced material in the tracking volume, robust pattern recognition and extended tracking acceptance.
 
 \subsection*{My PhD reasearch project}
 
-\subsubsection*{Analysis on current CMS data set: Higgs boson pair production}
-\vskip -.2cm
-In the field of data analysis, searches for Higgs boson pair production have been performed by the ATLAS and CMS experiments using LHC pp collision data. These include searches for BSM (Beyond Standard Model) production as well as more targeted searches for production with SM-like kinematics in $\sqrt{s} = 8\TeV$ and $13\TeV$ data. 
-In particular the CMS Firenze group is involved in the important search of resonant and nonresonant Higgs boson pair production, presented by CMS in ~\cite{Analysis}, based on LHC pp collision data at $\sqrt{s}=13$ TeV collected by the CMS experiment, corresponding to an integrated luminosity of 35.9 $fb^{-1}$. The analysis targets $\mathrm{X \rightarrow HH}$ where one of the H decays into $b\overline{b}$, and the other into Z($ll$) Z($\nu\nu$) or W($l\nu$) W($l\nu$), where $l$ is either an electron, a muon, or a tau lepton that decays leptonically. 
+%\subsubsection*{Analysis on current CMS data set: Higgs boson pair production}
+%\vskip -.2cm
+\begin{description}[style=unboxed,leftmargin=.2cm]
+\item[Analysis on current CMS data set: Higgs boson pair production.] Searches for Higgs boson pair production have been performed by the ATLAS and CMS experiments using LHC pp collision data. These include searches for BSM (Beyond Standard Model) production as well as more targeted searches for production with SM-like kinematics in $\sqrt{s} = 8\TeV$ and $13\TeV$ data. 
+In particular the CMS Firenze group is involved in the important search of resonant and nonresonant Higgs boson pair production, presented by CMS in ~\cite{Analysis}, based on LHC pp collision data at $\sqrt{s}=13$ TeV collected by the CMS experiment, corresponding to an integrated luminosity of $35.9\ifb$. The analysis targets $\mathrm{X \rightarrow HH}$ where one of the H decays into $b\overline{b}$, and the other into Z($\ell\ell$) Z($\nu\nu$) or W($\ell\nu$) W($\ell\nu$), where $\ell$ is either an electron, a muon, or a tau lepton that decays leptonically. 
 %The search presented in~\cite{Analysis} by CMS Collaboration (that includes the CMS Firenze group) is based on LHC pp collision data at %$\sqrt{s}=13$ TeV collected by the CMS experiment, corresponding to an integrated luminosity of 35.9 $fb^{-1}$. 
 %Nonresonant Higgs boson pair production (HH) can be used to directly study the Higgs boson self-coupling. 
- In the SM the destructive interference between different diagrams makes the observation of HH production extremely challenging.
+ In the SM, the destructive interference between different diagrams makes the observation of HH production extremely challenging.
 %, even in the most optimistic scenarios of energy and integrated luminosity at the future HL-LHC. 
 Indirect effects at the electroweak scale arising from beyond the standard model (BSM) phenomena at a higher scale can be parameterized in an effective field theory framework by introducing coupling modifiers for the SM parameters involved in HH production. %, namely $k_{\lambda}=\lambda /\lambda_{SM} $ for the Higgs boson self-coupling $\lambda$ and $k_t= y_t /y_{t_{SM}}$ for the top quark Yukawa coupling $y_t$. 
  Such modifications of the Higgs boson couplings could enhance Higgs boson pair production to rates observable with the Phase-1 data set.  
-In my PhD activity I will take care of data analysis with HH final states \mbox{(Phase-1)}, because it is a very interesting physic process and to gain experience with the analysis of a running experiment.
+\begin{siderules}
+\noindent {\sf In my PhD activity I will analyse RunII data for HH final states, a very interesting physics process, to gain experience with a running experiment.}
+\end{siderules}
+\end{description}
 
-\subsubsection*{Studies of Serial Powering for Phase-2 Inner Tracker upgrade}
-\vskip -.2cm
-Extended tracking acceptance, high granularity, lack of space and the need of keeping to a minimum the material in the tracking volume brought to chose Serial Powering system for the IT, instead of parallel powering or the use of DC-DC converters (that can not withstand the high level of radiation expected for Phase-2 in the internal layer of IT, $2.3 \cdot 10^{16} n_{\mathrm{1 MeV eq}}/cm^2$, 1.2 Grad). A dedicated ``ShuntLDO'' circuit~\cite{SLDO} (a regulator \textit{Low Drop Out} coupled with a Shunt) handles the supply locally on each ReadOut Chip (ROC). The first ROC prototype, implemented in 65 nm CMOS technology, is already available, RD53A\cite{RD53A}. 
+\begin{description}[style=unboxed,leftmargin=.2cm]
+\item[Studies of Serial Powering for Phase-2 Inner Tracker upgrade.] Extended tracking acceptance, high granularity, reduced space and the need of minimizing the material in the tracking volume brought to chose a Serial Powering scheme for the IT, instead of parallel powering or the use of DC-DC converters (that cannot withstand the high level of radiation expected for Phase-2 in the internal layer of the IT).
+%, $2.3 \cdot 10^{16} n_{\mathrm{1 MeV eq}}/cm^2$, 1.2 Grad).
+A dedicated ``ShuntLDO'' circuit~\cite{SLDO} (a regulator \textit{Low Drop Out} coupled with a Shunt) handles the supply locally on each ReadOut Chip (ROC). The first ROC prototype, implemented in $65\nm$ CMOS technology, is already available, RD53A~\cite{RD53A}. 
 Up to now the validation of the ShuntLDO performances has been evaluated stand alone or with few ROCs connected together. 
-These studies have been also performed in Firenze INFN Laboratory and, were part of my Master's Degree Thesis (\textit{Development of an innovative powering scheme for CMS Inner Tracker for High Luminosity phase of LHC}).
-In my PhD activity I will take over the next crucial step for Serial Powering development, i.e. the test of an extended serial power chain within the larger and more ambitious scope of a full system test crucial for the design, development and construction of this new system. For 2019 and 2020 these are activities already planned in Firenze. %Also, for the Outer Tracker there will be improvement in the powering scheme.
-\vspace{-.3cm}
+These studies have been also performed in Firenze INFN Laboratory and were part of my Master's Degree Thesis~\cite{tesi}.
+\begin{siderules}
+\noindent {\sf In my PhD activity I will take over the next crucial step for Serial Powering development, i.e. the test of an extended serial power chain within the larger and more ambitious scope of a full system test crucial for the design, development and construction of this new system. For 2019 and 2020 these are activities already planned in Firenze.}
+%Also, for the Outer Tracker there will be improvement in the powering scheme.
+\end{siderules}
+\end{description}
 
-
-\subsubsection*{Simulation based Phase-2 physics studies:}
-%\subsection*{Improvements and future activities}
-\vspace{-.2cm}
-At HL-LHC %not only the luminosity will change but also 
+\begin{description}[style=unboxed,leftmargin=.2cm]
+\item[Simulation based Phase-2 physics studies: HH$\to$bbbb.] At HL-LHC %not only the luminosity will change but also 
 the entire CMS experiment will be upgraded, hence the response of the detector will change and it is crucial to study future analyses by running Monte Carlo studies to shape and optimize event reconstruction. In particular the upgraded Phase-2 detector is designed to cope with the challenging environment of \mbox{HL-LHC} and the performance of pileup mitigation, b-tagging, tau-tagging, photon identification efficiencies, and mass resolutions are instrumental to perform physiscs studies and high precision measurements. 
 %== per il mio phd voglio occuparmi di analisi con stati finali HH perché ritengo il caso di fisica molto interessante e per guadagnare esperienza con l'analisi di un esperimento running [bla, bla, bla]...
-Better performances will be achieved also thanks to the detector I'm contributing to and to Serial Powering in particular. It would be very interesting to evaluate the impact of these detector improvements onto a physic analysis and to understand how to exploit these new features by using Monte Carlo simulations. %I aleady experienced Monte Carlo studies in Bachelor’s Degree Thesis.
-A suitable benchmark channel that I will study in my Phd activity  would be  $\mathrm{HH \rightarrow b\overline{b}b\overline{b}}$, because the signature with four b quarks in the final state offers the highest branching
-fraction. 
-The upgraded tracker, with its improved momentum resolution and excellent b tagging capabilities has a significant impact for this channel. The four jets coming from the decays of the Higgs bosons are mainly in the central $\eta$ region. The increased acceptance of the tracker above $\mid \eta \mid > 2.4$ provides an improvement in signal acceptance. 
-%Given the all-jets signature of the final state the presence of an average of 140–200 pileup events, with an increased level of activity and energy flow, presents a serious challenge. Thus PU mitigation is an important consideration for this analysis. 
-The largest improvement to this analysis arises from the performance of the b tagging algorithm. Compared to the Run 2 analysis, the efficiency of identifying four b jets per event increases, on average, by 50-70\% \cite{TDR}.
+Better performances will be achieved also thanks to the detector I'm contributing to and to Serial Powering in particular. By using Monte Carlo simulations, it would be very interesting to evaluate the impact of these detector improvements on a physics analysis similar to the one I'm planning to study on current CMS data. %I aleady experienced Monte Carlo studies in Bachelor’s Degree Thesis.
 
+In fact the observation of the HH processes will greatly benefit of the upgraded tracker thanks to its better momentum resolution and excellent b-tagging capabilities, especially in the bbbb final states. The increased acceptance of the tracker above $\mid \eta \mid > 2.4$ provides an improvement in the acceptance of the four jets coming from the HH decay are mainly in the central $\eta$ region resulting in larger signal efficiency. Overall, also thanks to the much better performance of the b tagging algorithms, the efficiency of identifying four b jets per event increases, on average, by 50-70\%~\cite{TDR} ompared to the RunII analysis.
+%Given the all-jets signature of the final state the presence of an average of 140–200 pileup events, with an increased level of activity and energy flow, presents a serious challenge. Thus PU mitigation is an important consideration for this analysis. 
+\begin{siderules}
+\noindent {\sf In my Phd activity I will study, by Monte Carlo simulation I'm already experience with~\cite{TesiTriennale}, the benchmark channel $\mathrm{HH \rightarrow b\overline{b}b\overline{b}}$, because the signature with four b quarks in the final state offers the highest branching
+fraction, to evaluate the impact of the upgraded detector in this important physics channel that I will also study on current CMS data.} 
+\end{siderules}
+\end{description}
 
 %Higgs boson pair production is the most direct way to study the scalar potential of the SM
 %Higgs boson and the nature of electroweak symmetry breaking. The observation of this process
@@ -144,8 +165,6 @@ The largest improvement to this analysis arises from the performance of the b ta
 %\subsection*{References}
 \begin{small}
 \begin{thebibliography}{1}
-\bibitem{TesiTriennale} A. Fiaschi, ``  Monte Carlo simulation for ${\mathrm H} \rightarrow \mathrm{\W \W}\rightarrow 2l + 2\nu$ study at LHC and comparison with CMS data'', \url{www.infn.it/thesis/PDF/getfile.php?filename=11405-Fiaschi-triennale.pdf}.
-
 \bibitem{Analysis}
 %\bibitem{Sirunyan:2017guj}%
   A.~M.~Sirunyan {\it et al.} [CMS Collaboration], ``Search for resonant and nonresonant Higgs boson pair production in the $ \mathrm{b}\overline{\mathrm{b}}\mathit{\ell \nu \ell \nu } $ final state in proton-proton collisions at $ \sqrt{s}=13 $ TeV'',  JHEP {\bf 1801} (2018) 054,  doi:10.1007/JHEP01(2018)054, [arXiv:1708.04188 [hep-ex]].
@@ -156,11 +175,12 @@ ESSCIRC 2009 (2009)}, pp. 276–279. doi: 10.1109/ESSCIRC.2009.5325974.
 \bibitem{RD53A} M.~Garcia-Sciveres, ``The RD53A Integrated Circuit''
 CERN-RD53-PUB-17-001 (2017), \url{https://cds.cern.ch/record/2287593}.
 
+\bibitem{tesi} A. Fiaschi, ``Development of an innovative powering scheme for CMS Inner Tracker for High Luminosity phase of LHC'', Master Degree Thesis (2018).
+
 \bibitem{TDR} CMS Collaboration, ``The Phase-2 Upgrade of the CMS
   Tracker'', 2017, CERN-LHCC-2017-009; CMS-TDR-014.
 
-
-
+\bibitem{TesiTriennale} A. Fiaschi, ``Monte Carlo simulation for ${\mathrm H} \rightarrow \mathrm{\W \W}\rightarrow 2\ell + 2\nu$ study at LHC and comparison with CMS data'', \url{www.infn.it/thesis/PDF/getfile.php?filename=11405-Fiaschi-triennale.pdf}, Bachelor’s Degree Thesis (2016).
 
 \end{thebibliography}
 \end{small}
